@@ -1,0 +1,15 @@
+[package]
+name = "isolated-flux-proofs"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name="isolatedfluxproofs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+flux-rs = { git  = "https://github.com/flux-rs/flux.git" }
+
+[package.metadata.flux]
+enabled = true
