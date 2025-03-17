@@ -70,10 +70,10 @@ fn overlap_body(
     mut region_size: usize,
     mut region_start: usize,
     initial_app_memory_size: usize,
-    initial_kernel_memory_size: usize,
+    _initial_kernel_memory_size: usize,
 ) -> Pair {
     memory_size_po2 *= 2;
-    region_size = memory_size_po2 / 2;
+    region_size *= 2;
     if region_start % region_size != 0 {
         region_start += region_size - (region_start % region_size);
     }
